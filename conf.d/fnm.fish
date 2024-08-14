@@ -9,7 +9,7 @@ function _fnm_install --on-event fnm_install
     if not test -d "$FNM_PATH"
         set PATH "$FNM_PATH" $PATH
         install_fnm
-        echo "Open another session or source $__fish_config_dir/conf.d/fnm.fish to enable fnm."
+        fnm env --use-on-cd --shell fish | source
     end
 end
 
